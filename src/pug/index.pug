@@ -1,0 +1,134 @@
+doctype html
+html(lang="en")
+    head
+        include components/mixin
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="css/styles.css")
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Maven+Pro:wght@400;500;700&family=Roboto:wght@500&family=Rubik&display=swap" rel="stylesheet">
+    body
+        .adventures
+            .wrapper
+                header
+                    .nav.navbar.navbar-expand-lg.bcg-nav.container.pb-5.navbar-dark
+                        .container.d-flex.w-100.justify-content-between.gap-3.py-5.g-0
+                            a.navbar-brand.logo(href='#')
+                                picture
+                                    img.island_image(src="img/trips.png", alt="")
+                            button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+                                span.navbar-toggler-icon
+                            .collapse.navbar-collapse#navbarSupportedContent.d-flex.justify-content-end.align-center
+                                ul.navbar-nav.flex-shrink-1.menu.column-gap-3
+                                    li.nav-item
+                                        a.nav-link.color(aria-current='page', href='#') головна      
+                                    li.nav-item
+                                        a.nav-link.color(href='#company') послуги     
+                                    li.nav-item
+                                        a.nav-link.color.nowrap-nav(href='#company') про компанію     
+                                    li.nav-item
+                                        a.nav-link.color(href='#special') акції     
+                                    li.nav-item
+                                        a.nav-link.color(href='#') партнери      
+                                    li.nav-item
+                                        a.nav-link.color(href='#recencion') відгуки      
+                                    li.nav-item
+                                        a.nav-link.color.px-0(href='#contacts') контакти
+                    .enter
+                        .block_sea.mx-auto
+                            h1.title Морські пригоди
+                            p.target Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
+                            a.details.cta(href="#") Детальніше
+                        h2.plan-trip обери свій план подорожі
+                        p.leader Наша фірма - лідер на ринку у своїй сфері
+                        a.button(href="#tours")
+        main.tours#tours
+            section.container.row.g-5.mx-auto.px-0.py-5
+                .col-3.about
+                    h2 про нашу компанію
+                    p Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
+                    a.details(href="#") Детальніше
+                    p * - зверніть увагу, зміна ціни може залежати від курсу долара.
+                .col
+                    .row.gx-5.d-flex.align-center.justify-content-between.cards
+                        .col.orders
+                            +figure (typeTrip.bike)
+                        .col.orders
+                            +figure (typeTrip.circle)
+                        .col.orders
+                            +figure (typeTrip.mess)
+                    .text-center
+                        a.other(href="#") дивитись усі плани
+                            span.arrow
+            hr.container.borders
+            section.container.island
+                .row.container-fluid.pe-0
+                    .col-4.p-0.me-4
+                        picture
+                            source(srcset="img/island.jpg" , type="image/jpg")
+                            img.island_image(src="img/island.webp", alt="")
+                    .col.p-0
+                        .row
+                            p.wonder Дивовижний безлюдний острів, який зводить людей з розуму
+                        .row
+                            .col.phyket_info
+                                p.phyket Пхукет - курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можна побачити на власні очі.
+                                .d-flex.buttons
+                                    a.order_tour.m-0(href="#") замовити тур
+                                    a.det.m-0(href="#") детальніше
+                            .col-4.text-center.phyket_price.d-flex.justify-content-center.align-center.flex-column
+                                p.price 575 грн./день
+                                p.description В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії.
+            section.wave
+                .container.p-0
+                    .row.mx-auto.d-flex.align-center.justify-content-between
+                        .col-5.wave_first.p-0
+                            h2.catch_wave СПІЙМАЙ ХВИЛЮ
+                            h2.live_bright ЖИВИ ЯСКРАВО!
+                            p.wave_det.pb-4 Полюбляєш екстрим та пригоди? Тоді тобі точно до нас! Мрієш стати на сапборд, але ніяк не міг наважитсь? Наші досвдчені інструктори навчать тебе вміло «піймати хвилі» та відчути себе справжнім сьорфером!
+                            a.details.deta.m-0(href="#") детальніше
+                        
+                        .col.text-center.wave_second
+                            picture
+                                img.quotes(src="img/quotes.svg", alt="")
+                            p.wave_det_sec Чудова туристична фірма, що повністю виправдала мої очікування від подорожі. Я був приємно вражений екскурсіями, що для мене підібрали, працюють спражні професіонали своєї справи. 
+                            p.oleg Олег Набережний
+                            p.client клієнт
+                            span.avatar.avatar_oleg
+            section.special_prop.container
+                .text-center
+                    h2.wonder Спеціальні пропозиції тижня
+                    p.phyket.hot_prop.mx-auto Гарячі пропозиції, по-швидше обирай і поїхали!
+                .row.w-100.d-flex.align-center.justify-content-center.cards.p-0.mx-auto
+                    .col.orders_sec
+                        +specialfig (specialTrip.romantictour)
+                    .col.orders_sec
+                        +specialfig (specialTrip.biketour)
+                    .col.orders_sec
+                        +specialfig (specialTrip.islandtour)
+                    .col.orders_sec
+                        +specialfig (specialTrip.surfingtour)
+            hr.container.borders
+            section.add_info.container
+                .row.w-100.d-flex.align-center.justify-content-center.cards.mx-auto
+                    .col.add_info_col.text-left.p-0.order_third
+                        p.wonder додаткова інформація
+                    .col.work_plan.order_third.p-0
+                        +additional (additionalTrip.workschedule)
+                    .col.food_plan.order_third.p-0
+                        +additional (additionalTrip.foodinfo)
+                    .col.consultant.order_third.text-center.p-0
+                        p.tour.ask задати питання
+                        p.description.cons_desc Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання
+                        a.price.cons_price(href="#") +38 (050) 56 98 511
+                        p.tour.cons_anna Анна Миколаївна
+                        p.client.cons_client консультант
+                        span.avatar.avatar_anna
+        footer.footer
+            picture
+                source(srcset="img/backfooter.jpg" , type="image/jpg")
+                img.island_image(src="img/backfooter.webp", alt="")
+            p.cars © 2016 Cars.com All rights reserved.
+    script(src="js/scripts.js")

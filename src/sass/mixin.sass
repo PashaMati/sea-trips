@@ -1,0 +1,93 @@
+@mixin button ($kind)
+    position: relative
+    display: inline-block
+    font-size: 16px
+    letter-spacing: 1px
+    text-transform: uppercase
+    font-weight: 400
+    text-align: center
+    border-radius: 23px
+    padding: 10px 29px
+    text-decoration: none
+    transition: all .5s ease
+    margin: 30px 0 20px
+
+    @if $kind == "yellow"
+        background-color: #ffb700
+        box-shadow: 0px 0px 3px 3px rgba(193,139,1,0.24)
+        color: #fdfcfb
+        border: 1px solid transparent
+
+        &:hover
+            background-color: #fff
+            color: #ffb700
+            border: 1px solid #ffb700
+            
+    @else if $kind == "white"
+        background-color: rgba(0,153,255,0)
+        border: 2px solid #0099ff
+        color: #0099ff
+
+        &:hover
+           background-color: #0099ff
+           border-color: #0099ff
+           color: #f5f8fa
+
+    @else if $kind == "transparent"
+        background-color: rgba(255,183,0,0)
+        border: 2px solid #ffb700
+        color: #ffb700
+
+        &:before
+            content: ""
+            position: absolute
+            background: url(../img/cloud.png) no-repeat
+            width: 16px
+            height: 11px
+            top: 8px
+            left: 13px
+
+        &:hover
+            background-color: #fff
+            color: #ffb700
+
+@mixin logo ()
+    display: flex
+    align-items: center
+
+    p
+        margin: 0 8px
+        font-size: 36px
+        line-height: 21px
+        color: #fff
+        font-weight: 500
+        font-family: "Exo2.0"
+        text-align: center
+
+@mixin otherplan
+    display: inline-block
+    position: relative
+    width: 10px
+    height: 10px
+    margin-left: 7px
+    transition: all 1s ease
+    box-sizing: border-box
+    
+    &:before
+        content: ""
+        position: absolute
+        width: 11px
+        height: 11px
+        border-radius: 50%
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+    &:after
+        content: ''
+        position: absolute
+        width: 4px
+        height: 4px
+        top: 50%
+        left: 40%
+        transform: translate(-50%, -50%) rotate(135deg)

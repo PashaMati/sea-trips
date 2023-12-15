@@ -1,0 +1,149 @@
+mixin figure (element)
+    figure.m-0
+        figcaption
+            p(class= (element.flag) ? "flag" : "")
+            .text-center
+                picture
+                    source(src=element.src + ".webp", type="image/webp")
+                    img(src=element.src + ".png", alt=element.alt)
+                p.tour.pt-3 #{element.sign} 
+                p.price #{element.price}
+                    span.currency #{element.currency}
+            p.fig_desc.description.mx-auto #{element.description}
+
+mixin specialfig (elements)
+    figure.m-0
+        figcaption
+            p(class= (elements.flag) ? "flag" : "")
+            .text-left
+                p.cards_p
+                    span(class= (elements.onbike) ? "onbike" : "")
+                    picture
+                        source(src=elements.src + ".webp", type="image/webp")
+                        img.w-100.specialfig_image(src=elements.src + ".png", alt=elements.alt)
+                .card_text_sec
+                    p.tour #{elements.sign} 
+                    p.description #{elements.description}
+                    .d-flex.align-center.justify-content-between.py-2
+                        p.price.m-0 #{elements.price}
+                            span.currency #{elements.currency}
+                        a.other.other_order(href=elements.href) Замовити
+                            span.arrow.other_orders
+
+mixin additional (infos)
+    figure.m-0
+        figcaption
+            .card
+                img.card-img(src=infos.srcfond + ".png", alt=infos.altfond)
+                .card-img-overlay.text-left.last_cards.d-flex.flex-column.justify-content-between.align-start
+                    .d-flex.justify-content-start
+                        picture
+                            source(src=infos.src + ".webp", type="image/webp")
+                            img(src=infos.src + ".png", alt=infos.alt)
+                        p.plan_p #{infos.sign} 
+                            b.file_size.text-left #{infos.size}
+                    p.file_description #{infos.description}
+                    a.download.m-0(href=infos.href) скачати
+
+-
+    let typeTrip = { 
+        bike: {
+            src: "img/bike",
+            alt: "Міні картинка велосипеду",
+            sign: "Тур на велосипедах",
+            price: 335,
+            currency: " грн*",
+            description: "Подорожуючи  на велосипеді, ви поринете в атмосферу мальовничих гір, чарівнмх краєвидів та шалених пригод.",
+            flag: false
+        },
+        circle: {
+            src: "img/circle",
+            alt: "Міні картинка машини",
+            sign: "Екскурсія на острів",
+            price: 500,
+            currency: " грн*",
+            description: "Подорож на острів занурить Вас у незабутнні пригоди. Неймовірна краса  у будь-яку пору року .",
+            flag: true
+        },
+        mess: {
+            src: "img/mess",
+            alt: "Міні картинка літака",
+            sign: "Особливе замовлення",
+            price: 250,
+            currency: " грн*",
+            description: "Обираючи цю подорож, Ви самостійно робите її незабутнбою та не схожою на будь-які інші.",
+            flag: true
+        }
+    }
+
+-
+    let specialTrip = { 
+        romantictour: {
+            src: "img/roman",
+            alt: "Романтична подорож",
+            sign: "Романтична подорож на 2",
+            description: "Подорож у найромантичніші куточки світу, занурить вас у дивовижні пейзажі природи.",
+            price: 2599,
+            currency: " грн.",
+            href: "#",
+            flag: true,
+            onbike: false
+        },
+        biketour: {
+            src: "img/biketour",
+            alt: "Тур на велосипеді",
+            sign: "Велотур",
+            description: "Бажаєте прокататись з вітерцем, та ще й з критим краєвидом довкола? Тоді швидше замовляй велотур!",
+            price: 555,
+            currency: " грн.",
+            href: "#",
+            flag: true,
+            onbike: true
+        },
+        islandtour: {
+            src: "img/islands",
+            alt: "Тур на острів",
+            sign: "На острови!",
+            description: "Хочеш зануритись у тишу, місце де не має натовпу, та панує дмка природа? Тоді вперед за пригодами!",
+            price: 1559,
+            currency: " грн.",
+            href: "#",
+            flag: true,
+            onbike: false
+        },
+        surfingtour: {
+            src: "img/serfing",
+            alt: "Серфінг тур",
+            sign: "Катання на сьорфінгу",
+            description: "Хочеш отримати екстрим та мега вражень одночасно? Тоді вперед ловити хвилі!",
+            price: 999,
+            currency: " грн",
+            href: "#",
+            flag: true,
+            onbike: false
+        }
+    }
+
+-
+    let additionalTrip = { 
+        workschedule: {
+            srcfond: "img/workplan",
+            altfond: "Фон графіку",
+            src: "img/file",
+            alt: "Графік роботи",
+            sign: "Графік роботи готелів.xls",
+            size: "Розмір файла: 10Mb",
+            description: "Розклад роботи усіх наших готелів, можете знайти за цим посиланням. Та додатково завантажити їх фото.",
+            href: "#",
+        },
+        foodinfo: {
+            srcfond: "img/foodinfo",
+            altfond: "Фон харчування",
+            src: "img/file",
+            alt: "Інфо про харчування",
+            sign: "Інформація про харчування.xls",
+            size: "Розмір файла: 10Mb",
+            description: "У будь-якому нашому турі включені сніданки у вартість. Якщо ж бажаєте замовити додотково, то ознайомтесь з умовами.",
+            href: "#",
+        }
+    }
