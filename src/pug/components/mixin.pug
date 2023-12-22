@@ -33,17 +33,15 @@ mixin specialfig (elements)
 mixin additional (infos)
     figure.m-0
         figcaption
-            .card
-                img.card-img(src=infos.srcfond + ".png", alt=infos.altfond)
-                .card-img-overlay.text-left.last_cards.d-flex.flex-column.justify-content-between.align-start
-                    .d-flex.justify-content-start
-                        picture
-                            source(src=infos.src + ".webp", type="image/webp")
-                            img(src=infos.src + ".png", alt=infos.alt)
-                        p.plan_p #{infos.sign} 
-                            b.file_size.text-left #{infos.size}
-                    p.file_description #{infos.description}
-                    a.download.m-0(href=infos.href) скачати
+            .text-left.last_cards.d-flex.flex-column.justify-content-between.align-start
+                .d-flex.justify-content-start
+                    picture
+                        source(src=infos.src + ".svg", type="image/svg")
+                        img(src=infos.src + ".svg", alt=infos.alt)
+                    p.plan_p #{infos.sign} 
+                        b.file_size.text-left #{infos.size}
+                p.file_description #{infos.description}
+                a.download.m-0(href=infos.href) скачати
 
 -
     let typeTrip = { 

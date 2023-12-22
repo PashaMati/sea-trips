@@ -41,8 +41,8 @@
         &:before
             content: ""
             position: absolute
-            background: url(../img/cloud.png) no-repeat
-            width: 16px
+            background: url(../img/cloud.svg) no-repeat
+            width: 15px
             height: 11px
             top: 8px
             left: 13px
@@ -91,3 +91,7 @@
         top: 50%
         left: 40%
         transform: translate(-50%, -50%) rotate(135deg)
+
+=media ($size)
+    @media screen and (min-width: #{$size}px)
+        @content

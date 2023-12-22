@@ -13,29 +13,28 @@ html(lang="en")
         .adventures
             .wrapper
                 header
-                    .nav.navbar.navbar-expand-lg.bcg-nav.container.pb-5.navbar-dark
-                        .container.d-flex.w-100.justify-content-between.gap-3.py-5.g-0
-                            a.navbar-brand.logo(href='#')
-                                picture
-                                    img.island_image(src="img/trips.png", alt="")
+                    nav.navbar.navbar-expand-lg.bcg-nav.container.pb-5.navbar-dark
+                        .container.d-flex.justify-content-between.gap-3.py-5
+                            a.navbar-brand.logo(href='#') 
+                                img(src="img/trips.png", alt="")
                             button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
                                 span.navbar-toggler-icon
-                            .collapse.navbar-collapse#navbarSupportedContent.d-flex.justify-content-end.align-center
-                                ul.navbar-nav.flex-shrink-1.menu.column-gap-3
-                                    li.nav-item
+                            .collapse.justify-content-end.navbar-collapse#navbarSupportedContent
+                                ul.navbar-nav.mb-2.mb-lg-0.flex-shrink-1.pt-3.menu-main-nav
+                                    li.nav-item.ps-3
                                         a.nav-link.color(aria-current='page', href='#') головна      
-                                    li.nav-item
+                                    li.nav-item.ps-3
                                         a.nav-link.color(href='#company') послуги     
-                                    li.nav-item
+                                    li.nav-item.ps-3
                                         a.nav-link.color.nowrap-nav(href='#company') про компанію     
-                                    li.nav-item
+                                    li.nav-item.ps-3
                                         a.nav-link.color(href='#special') акції     
-                                    li.nav-item
+                                    li.nav-item.ps-3
                                         a.nav-link.color(href='#') партнери      
-                                    li.nav-item
+                                    li.nav-item.ps-3
                                         a.nav-link.color(href='#recencion') відгуки      
-                                    li.nav-item
-                                        a.nav-link.color.px-0(href='#contacts') контакти
+                                    li.nav-item.ps-3
+                                        a.nav-link.color(href='#contacts') контакти
                     .enter
                         .block_sea.mx-auto
                             h1.title Морські пригоди
@@ -45,23 +44,24 @@ html(lang="en")
                         p.leader Наша фірма - лідер на ринку у своїй сфері
                         a.button(href="#tours")
         main.tours#tours
-            section.container.row.g-5.mx-auto.px-0.py-5
-                .col-3.about
-                    h2 про нашу компанію
-                    p Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
-                    a.details(href="#") Детальніше
-                    p * - зверніть увагу, зміна ціни може залежати від курсу долара.
-                .col
-                    .row.gx-5.d-flex.align-center.justify-content-between.cards
-                        .col.orders
-                            +figure (typeTrip.bike)
-                        .col.orders
-                            +figure (typeTrip.circle)
-                        .col.orders
-                            +figure (typeTrip.mess)
-                    .text-center
-                        a.other(href="#") дивитись усі плани
-                            span.arrow
+            section.container.g-5.px-0.py-5
+                .row.mx-auto
+                    .col-md-3.about
+                        h2 про нашу компанію
+                        p Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
+                        a.details(href="#") Детальніше
+                        p * - зверніть увагу, зміна ціни може залежати від курсу долара.
+                    .col
+                        .row.w-100.d-flex.align-center.mx-auto.cards
+                            .col-md-3.orders.col-12
+                                +figure (typeTrip.bike)
+                            .col-md-3.orders.col-12
+                                +figure (typeTrip.circle)
+                            .col-md-3.orders.col-12
+                                +figure (typeTrip.mess)
+                        .text-center
+                            a.other(href="#") дивитись усі плани
+                                span.arrow
             hr.container.borders
             section.container.island
                 .row.container-fluid.pe-0
