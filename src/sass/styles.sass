@@ -155,9 +155,9 @@ header
     +logo
 
 .about
-    padding-left: 0
     text-align: center
-    +media(768)
+    +media(992)
+        padding-left: 0
         max-width: 304px
         text-align: start
 
@@ -197,7 +197,7 @@ header
 .orders
     position: relative
     box-sizing: border-box
-    width: 250px
+    width: 240px
     padding: 30px 20px
     +media(1400)
         width: 272px
@@ -227,7 +227,7 @@ header
     max-width: 243px
 
 .description
-    max-width: 230px
+    width: 230px
     font-size: 13px
     line-height: 1.5em
     color: #999
@@ -284,10 +284,30 @@ header
 .island
     padding: 75px 0
 
+.row_island
+    row-gap: 30px
+
 .island_image
     object-fit: cover
     width: 100%
     height: 100%
+    +media(992)
+        max-width: 400px
+
+.col_image
+    width: 100%
+    +media(992)
+        width: auto
+
+h2.wonder_special
+    text-align: center
+
+p.wonder_island
+    font-size: 28px
+    line-height: 1.3em
+    +media(768)
+        font-size: 36px
+        line-height: 1.17em
 
 .wonder
     font-size: 36px
@@ -297,7 +317,7 @@ header
     font-weight: 400
     margin-bottom: 26px
     text-align: center
-    +media(473)
+    +media(992)
         text-align: left
 
 .phyket
@@ -307,15 +327,22 @@ header
     color: #333
     font-weight: 400
     font-style: italic
-    margin-bottom: 30px
+    text-align: center
+    margin: 0 auto
+    +media(768)
+        text-align: left
+    +media(990)
+        margin-left: 0
 
 .buttons
     flex-wrap: wrap
     justify-content: center
     column-gap: 10px
     row-gap: 20px
-    +media (385)
+    padding-top: 30px
+    +media(492)
         flex-wrap: nowrap
+    +media (768)
         justify-content: start
 
 .order_tour
@@ -330,20 +357,41 @@ header
     width: 100%
     max-width: 287px
     background-color: #edf2f5 
-    padding: 0 55px
+    padding: 25px 55px
+    margin: 0 auto
+    +media(992)
+        margin-left: 0
 
 .wave
     background-image: url(../img/sea.jpg)
     background-size: cover
     background-position: center
     padding: 90px 0 100px
+    row-gap: 20px
 
     h2
-        font-size: 56px
+        font-size: 32px
         letter-spacing: 2px
         line-height: 1.18em
         text-transform: uppercase
-        font-weight: 400  
+        font-weight: 400
+        text-align: center
+        +media(515)
+            font-size: 50px
+        +media(1100)
+            font-size: 32px
+            text-align: left
+        +media(1200)
+            font-size: 56px
+
+.wave_row
+    flex-wrap: wrap
+    justify-content: center
+    row-gap: 60px
+    column-gap: 20px
+    +media(1100)
+        flex-wrap: nowrap
+        justify-content: space-between
 
 .catch_wave
     color: #fff
@@ -358,15 +406,29 @@ header
     color: #fff
     font-weight: 400
     font-family: "PT Sans"
+    text-align: center
+    margin: 0 auto
+    +media(1100)
+        text-align: left
+        margin: 0
 
 .deta
     padding: 10px 33px
+    left: 50%
+    transform: translate(-50%)
+    +media(1100)
+        left: 0
+        transform: none
 
 .wave_second
     max-width: 572px
     position: relative
     padding: 0 35px
     box-sizing: border-box
+    min-height: 290px
+    padding-bottom: 20px
+    +media(1200)
+        max-height: 290px
 
     &:before
         content: ""
@@ -402,9 +464,10 @@ header
     color: #fff
     font-weight: 400
     font-style: italic
-    margin: 14px 0
-    text-align: left
+    text-align: center
     padding: 35px 0
+    +media(473)
+        text-align: left
 
 .oleg
     font-size: 18px
@@ -418,6 +481,10 @@ header
     color: #999
     font-weight: 400
     padding: 8px
+
+.wave_second_low
+    position: relative
+    padding-bottom: 30px
 
 .avatar
     position: absolute
@@ -442,6 +509,7 @@ header
     position: relative
     padding: 0
     width: 100%
+    max-width: 278px
 
     &:hover
         background-color: #fff
@@ -476,8 +544,9 @@ header
 .card_text_sec
     padding: 24px
 
-.hot_prop
+p.hot_prop
     margin-bottom: 36px
+    text-align: center
 
 .other_order
     margin: auto 0
@@ -496,6 +565,7 @@ header
         border-top: 1px solid #ffb700
 
 .last_cards
+    width: 275px
     align-items: flex-start
     padding: 25px 36px
     row-gap: 19px
@@ -507,7 +577,7 @@ header
 .consultant
     position: relative
     min-height: 306px
-    min-width: 272px
+    min-width: 275px
 
     &:before
         content: ""
