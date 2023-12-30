@@ -309,6 +309,11 @@ p.wonder_island
         font-size: 36px
         line-height: 1.17em
 
+p.wonder_add
+    text-align: center
+    +media(1200)
+        text-align: left
+
 .wonder
     font-size: 36px
     line-height: 1.17em
@@ -565,7 +570,6 @@ p.hot_prop
         border-top: 1px solid #ffb700
 
 .last_cards
-    width: 275px
     align-items: flex-start
     padding: 25px 36px
     row-gap: 19px
@@ -577,7 +581,6 @@ p.hot_prop
 .consultant
     position: relative
     min-height: 306px
-    min-width: 275px
 
     &:before
         content: ""
@@ -601,6 +604,7 @@ p.hot_prop
 
 .ask
     position: absolute
+    width: 147px
     left: 50%
     transform: translateX(-50%)
     top: -10px
@@ -638,6 +642,7 @@ p.hot_prop
     margin: 27px 0 0
 
 .plan_p
+    width: 135px
     font-size: 18px
     line-height: 1.3em
     color: #fff
@@ -653,7 +658,6 @@ p.hot_prop
     margin-top: 10px
 
 .file_description
-    max-width: 230px
     height: 70px
     font-size: 13px
     line-height: 1.5em
@@ -668,9 +672,13 @@ p.hot_prop
     padding: 5px 13px 5px 31px
 
 .work_plan
+    //max-width: 307px
+    //width: 100%
     background: url(../img/workplan.png) no-repeat center/cover
 
 .food_plan
+    //max-width: 307px
+    //width: 100%
     background: url(../img/foodinfo.png) no-repeat center/cover
 
 .footer

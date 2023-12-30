@@ -114,13 +114,13 @@ html(lang="en")
             hr.container.borders
             section.add_info.container
                 .row.w-100.d-flex.align-center.justify-content-center.cards.mx-auto
-                    .col.add_info_col.text-left.p-0.order_third
-                        p.wonder додаткова інформація
-                    .col.work_plan.order_third.p-0
+                    .col-xl.col-sm-12.add_info_col.text-left.p-0.order_third
+                        p.wonder_add.wonder додаткова інформація
+                    .col-lg.col-sm.work_plan.order_third.p-0
                         +additional (additionalTrip.workschedule)
-                    .col.food_plan.order_third.p-0
+                    .col-lg.col-sm.food_plan.order_third.p-0
                         +additional (additionalTrip.foodinfo)
-                    .col.consultant.order_third.text-center.p-0
+                    .col-lg-6.col-sm-12.col-xl.consultant.order_third.text-center.p-0
                         p.tour.ask задати питання
                         p.description.cons_desc Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання
                         a.price.cons_price(href="#") +38 (050) 56 98 511
